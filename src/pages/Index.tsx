@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Stethoscope, FileText, BarChart3, History, GitBranch } from "lucide-react";
+import { Stethoscope, FileText, BarChart3, History } from "lucide-react";
 import PatientForm from '@/components/PatientForm';
 import ScoringAssessment from '@/components/ScoringAssessment';
 import ResultsDashboard from '@/components/ResultsDashboard';
@@ -10,7 +10,6 @@ import ScoreHistory from '@/components/ScoreHistory';
 import GuidelinesPage from '@/components/GuidelinesPage';
 import BMICalculator from '@/components/BMICalculator';
 import LoginPage from '@/components/LoginPage';
-import SystemFlowDiagram from '@/components/SystemFlowDiagram';
 
 const Index = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -61,8 +60,6 @@ const Index = () => {
         return <GuidelinesPage onBack={() => setCurrentView('home')} />;
       case 'bmi-calculator':
         return <BMICalculator onBack={() => setCurrentView('home')} />;
-      case 'system-flow':
-        return <SystemFlowDiagram onBack={() => setCurrentView('home')} />;
       default:
         return (
           <div className="w-full px-4 space-y-6">
@@ -76,7 +73,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-4">
               <Card 
                 className="cursor-pointer hover:shadow-lg transition-shadow border-l-4 border-l-blue-500"
                 onClick={() => setCurrentView('patient-form')}
@@ -133,21 +130,6 @@ const Index = () => {
                 <CardContent className="py-2 px-2 sm:p-6">
                   <CardDescription className="text-center text-xs sm:text-sm">
                     Kalkulator BMI
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card 
-                className="cursor-pointer hover:shadow-lg transition-shadow border-l-4 border-l-indigo-500"
-                onClick={() => setCurrentView('system-flow')}
-              >
-                <CardHeader className="text-center py-3 px-2 sm:p-6">
-                  <GitBranch className="h-6 w-6 sm:h-8 sm:w-8 text-indigo-600 mx-auto mb-1 sm:mb-2" />
-                  <CardTitle className="text-sm sm:text-lg">Diagram Alur</CardTitle>
-                </CardHeader>
-                <CardContent className="py-2 px-2 sm:p-6">
-                  <CardDescription className="text-center text-xs sm:text-sm">
-                    Alur proses sistem
                   </CardDescription>
                 </CardContent>
               </Card>
