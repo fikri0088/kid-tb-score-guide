@@ -1,6 +1,6 @@
 # Kotlin TB Scoring Example
 
-File `TbScoring.kt` menunjukkan implementasi logika penilaian risiko TB dalam bahasa Kotlin.
+File `TbScoring.kt` menunjukkan implementasi logika penilaian risiko TB dalam bahasa Kotlin. Selain kode logika, tersedia berkas `assessment_layout.xml` yang memberikan contoh tata letak (layout) Android untuk menampilkan form penilaian.
 
 ## Menjalankan Contoh
 
@@ -15,3 +15,5 @@ File `TbScoring.kt` menunjukkan implementasi logika penilaian risiko TB dalam ba
    ```
 
 Program contoh akan menghitung skor dari jawaban sampel dan menampilkan total skor beserta tingkat risikonya.
+
+Layout `assessment_layout.xml` dapat diimpor ke dalam proyek Android untuk membuat tampilan form penilaian.
