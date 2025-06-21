@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Stethoscope, FileText, BarChart3, History } from "lucide-react";
+import { Stethoscope, FileText, BarChart3, History, Code } from "lucide-react";
 import PatientForm from '@/components/PatientForm';
 import ScoringAssessment from '@/components/ScoringAssessment';
 import ResultsDashboard from '@/components/ResultsDashboard';
@@ -10,6 +10,7 @@ import ScoreHistory from '@/components/ScoreHistory';
 import GuidelinesPage from '@/components/GuidelinesPage';
 import BMICalculator from '@/components/BMICalculator';
 import LoginPage from '@/components/LoginPage';
+import KotlinExample from '@/components/KotlinExample';
 
 const Index = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -60,6 +61,8 @@ const Index = () => {
         return <GuidelinesPage onBack={() => setCurrentView('home')} />;
       case 'bmi-calculator':
         return <BMICalculator onBack={() => setCurrentView('home')} />;
+      case 'kotlin':
+        return <KotlinExample onBack={() => setCurrentView('home')} />;
       default:
         return (
           <div className="w-full px-4 space-y-6">
@@ -119,7 +122,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card 
+              <Card
                 className="cursor-pointer hover:shadow-lg transition-shadow border-l-4 border-l-orange-500"
                 onClick={() => setCurrentView('bmi-calculator')}
               >
@@ -130,6 +133,21 @@ const Index = () => {
                 <CardContent className="py-2 px-2 sm:p-6">
                   <CardDescription className="text-center text-xs sm:text-sm">
                     Kalkulator BMI
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card
+                className="cursor-pointer hover:shadow-lg transition-shadow border-l-4 border-l-gray-500"
+                onClick={() => setCurrentView('kotlin')}
+              >
+                <CardHeader className="text-center py-3 px-2 sm:p-6">
+                  <Code className="h-6 w-6 sm:h-8 sm:w-8 text-gray-600 mx-auto mb-1 sm:mb-2" />
+                  <CardTitle className="text-sm sm:text-lg">Contoh Kotlin</CardTitle>
+                </CardHeader>
+                <CardContent className="py-2 px-2 sm:p-6">
+                  <CardDescription className="text-center text-xs sm:text-sm">
+                    Lihat kode TB scoring
                   </CardDescription>
                 </CardContent>
               </Card>
