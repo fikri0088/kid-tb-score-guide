@@ -74,4 +74,4 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 
 ## Kotlin Example
 
-Repositori ini juga menyertakan contoh implementasi perhitungan skor TB menggunakan bahasa Kotlin pada direktori `kotlin/`. Baca `kotlin/README.md` untuk petunjuk kompilasi dan cara menjalankan contoh.
+Repositori ini juga menyertakan contoh implementasi perhitungan skor TB menggunakan bahasa Kotlin pada direktori `kotlin/`. Baca `kotlin/README.md` untuk petunjuk kompilasi dan cara menjalankan contoh. Kode Kotlin ini juga dapat dilihat langsung di aplikasi melalui menu **Contoh Kotlin** pada halaman utama.
