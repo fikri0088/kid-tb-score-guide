@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout form penilaian TB versi Android.
+    Setiap bagian berisi kelompok pertanyaan dengan RadioButton untuk memilih opsi.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Judul utama -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penilaian Risiko TB Anak"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Bagian Riwayat dan Kontak -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat dan Kontak"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/exposure_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/exposure0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak ada kontak/paparan"
+                android:tag="0" />
+            <RadioButton
+                android:id="@+id/exposure1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak jelas atau tidak diketahui"
+                android:tag="1" />
+            <RadioButton
+                android:id="@+id/exposure2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kontak dengan pasien TB BTA (-)"
+                android:tag="2" />
+            <RadioButton
+                android:id="@+id/exposure3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kontak dengan pasien TB BTA (+)"
+                android:tag="3" />
+        </RadioGroup>
+
+        <!-- Bagian Uji Tuberkulin -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uji Tuberkulin"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+        <RadioGroup
+            android:id="@+id/tuberculin_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/tuberculin0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Negatif (<5mm)"
+                android:tag="0" />
+            <RadioButton
+                android:id="@+id/tuberculin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meragukan (5-9mm)"
+                android:tag="1" />
+            <RadioButton
+                android:id="@+id/tuberculin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Positif (\u226510mm) atau reaksi vesikular"
+                android:tag="2" />
+        </RadioGroup>
+
+        <!-- Contoh kategori tambahan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status Gizi"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+        <RadioGroup
+            android:id="@+id/nutrition_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/nutrition0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gizi baik (BB/TB > 90%)"
+                android:tag="0" />
+            <RadioButton
+                android:id="@+id/nutrition1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gizi kurang (BB/TB 70-90%)"
+                android:tag="1" />
+            <RadioButton
+                android:id="@+id/nutrition2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gizi buruk (BB/TB < 70%)"
+                android:tag="2" />
+        </RadioGroup>
+
+        <!-- Tombol untuk memproses jawaban -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hitung Skor"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>
